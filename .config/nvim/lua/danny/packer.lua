@@ -45,4 +45,16 @@ return require('packer').startup(function(use)
 	use('nvim-tree/nvim-web-devicons')
 	use('nvim-tree/nvim-tree.lua')
 
+    use('bluz71/nvim-linefly')
+    use({
+        "utilyre/barbecue.nvim",
+        tag = "*",
+        requires = {
+            "SmiteshP/nvim-navic",
+            "nvim-tree/nvim-web-devicons",
+        },
+        config = function()
+            require("barbecue").setup()
+        end,
+    })
 end)
